@@ -1,5 +1,5 @@
 // Time Complexity: O(n^2)
-// Space Complexity: O(n)
+// Space Complexity: O(1)
 
 void selection_sort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
