@@ -1,5 +1,5 @@
 // Time Complexity: O(n^2)
-// Space Complexity: O(n)
+// Space Complexity: O(1)
 
 void insertion_sort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
