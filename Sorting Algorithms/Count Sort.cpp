@@ -1,9 +1,28 @@
 // Time Complexity: O(k + n) the sum of the space complexities of the count array and the output array
 // Space Complexity: O(k) k is the maximum value in an array
 
+void count_sort(int arr[], int n) {
+    int mx = arr[0];
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > mx) {
+            mx = arr[i];
+        }
+    }
+    int freq[mx + 1] = {0};
+    for (int i = 0; i < n; i++) {
+        freq[arr[i]]++;
+    }
+    int idx = 0;
+    for (int i = 0; i <= mx; i++) {
+        for (int j = 0; j < freq[i]; j++, idx++)
+            arr[idx] = i;
+    }
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << ' ';
+    }
+}
 
-
-
+/*
 #include <bits/stdc++.h>
 #define FAST ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 const int size = 10000;
@@ -37,4 +56,4 @@ int main() {
     }
     return 0;
 }
-
+*/
