@@ -1,6 +1,7 @@
 // Time Complexity: O(n^2)
 // Space Complexity: O(1)
 
+//Insertion Sort in ascending order
 void insertion_sort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
         int k = arr[i];
