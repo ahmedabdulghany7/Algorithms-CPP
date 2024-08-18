@@ -14,6 +14,15 @@ void insertion_sort(int arr[], int n) {
     }
 }
 
+/*
+void insertion_sort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        for (int j = i - 1; j >= 0 and arr[j] < arr[i]; j--) {
+            swap(arr[j + 1], arr[j]);
+        }
+    }
+}
+*/
 
 /*
 #include <bits/stdc++.h>
