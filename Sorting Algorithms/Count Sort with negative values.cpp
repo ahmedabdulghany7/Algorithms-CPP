@@ -25,6 +25,7 @@ void count_sort(int arr[], int n) {
 }
 
 /*
+//best for higher values
 #include <bits/stdc++.h>
 #define FAST ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 const int size = 1000;
