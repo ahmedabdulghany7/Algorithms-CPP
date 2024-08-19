@@ -13,24 +13,29 @@ void wiggleSort(vector<int> &nums) {
     for (int i = 1; i + 1 < n; i += 2) {
         swap(nums[i], nums[i + 1]);
     }
-    for (int i = 0; i < n; i++) {
-        cout << nums[i] << ' ';
+/*
+    for (int i = 0; i < n - 1; i += 1) {
+        if ((i % 2 == 0) == (nums[i] > nums[i + 1])) {
+            swap(nums[i], nums[i + 1]);
+        }
+*/
+        for (int i = 0; i < n; i++) {
+            cout << nums[i] << ' ';
+        }
     }
-}
 
-vector<int> read_vector() {
-    int n;
-    cin >> n;
-    vector<int> v(n);
-    for (int i = 0; i < n; ++i)
-        cin >> v[i];
-    return v;
-}
+    vector<int> read_vector() {
+        int n;
+        cin >> n;
+        vector<int> v(n);
+        for (int i = 0; i < n; ++i)
+            cin >> v[i];
+        return v;
+    }
 
-int main() {
-    FAST;
-    vector<int> v = read_vector();
-    wiggleSort(v);
-    return 0;
-}
-
+    int main() {
+        FAST;
+        vector<int> v = read_vector();
+        wiggleSort(v);
+        return 0;
+    }
