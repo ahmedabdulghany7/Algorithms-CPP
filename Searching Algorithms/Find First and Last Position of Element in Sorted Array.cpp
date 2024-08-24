@@ -1,3 +1,21 @@
+//O(logn)
+class Solution {
+public:
+    vector<int> searchRange(vector<int> &nums, int target) {
+        auto range = equal_range(nums.begin(), nums.end(), target);
+        if (range.first == nums.end())
+            return {-1, -1};
+        int l = range.first - nums.begin();
+        int r = range.second - nums.begin();
+        if (nums[l] != target) {
+            return {-1, -1};
+        }
+        return {l, r - 1};
+    }
+};
+
+/*
+---------------
 class Solution
 {
 public:
@@ -35,3 +53,4 @@ public:
         return {binarySfirst(nums, target), binarySelast(nums, target)};
     }
 };
+*/
